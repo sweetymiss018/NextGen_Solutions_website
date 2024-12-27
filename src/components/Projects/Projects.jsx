@@ -73,7 +73,7 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           <motion.img
-            src="/mobile-preview.png"
+            src="https://media4.giphy.com/media/3bXSswmHBH2xXVpDgn/giphy.webp?cid=790b76119ryrv0efi3cps7fv8nklrp2ncg2i4qlbh2h1xhhv&ep=v1_gifs_search&rid=giphy.webp&ct=g"
             alt="Mobile Preview"
             className="max-w-xs mx-auto"
             initial={{ y: 100 }}
