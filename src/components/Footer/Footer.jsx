@@ -48,7 +48,7 @@ const Footer = () => {
             Copyright © 2024-{new Date().getFullYear()}. Web Solution Centre. All Rights Reserved.
           </p>
           <p className="mt-2 text-sm text-gray-400">
-            An Etoile Info Solutions Pvt Ltd Company.
+            NextGen Solutions Pvt Ltd Company.
           </p>
         </div>
       </div>

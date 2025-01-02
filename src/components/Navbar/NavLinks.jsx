@@ -24,7 +24,7 @@ const NavLinks = ({ mobile }) => {
           className={`${
             mobile 
               ? 'text-3xl text-white hover:text-purple-400' 
-              : 'text-white/90 hover:text-white text-sm'
+              : 'text-white/90 hover:text-white text-lg'
           } font-medium transition-colors`}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}

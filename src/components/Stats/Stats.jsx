@@ -22,7 +22,17 @@ const Stats = () => {
       icon: BsMegaphone,
       title: "Digital Marketing",
       description: "Internet Marketing has always been our forte! By making use of smart marketing plans and SEO methodologies, we enhance your site's brand awareness across search crawlers, social media platforms, and the web at large!"
-    }
+    },
+    {
+      icon: BsMouse,
+      title: "Engaging User Experience",
+      description: "Web Solution Centre has the proficient technical team you need, to deliver intuitive, engaging, and addictive user experiences. We ensure to perfect even the tiniest user interaction details."
+    },
+    {
+      icon: BsGraphUp,
+      title: "Robust Strategy",
+      description: "To attain indelible success in eCommerce, you'll need a solid approach! We'll conduct all the brainstorming, create a strategy, and orchestrate the best method for achieving superior results."
+    },
   ];
 
   return (
