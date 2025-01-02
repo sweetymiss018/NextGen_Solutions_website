@@ -1,8 +1,7 @@
 const FooterLinks = () => {
   const links = [
-    'Home', 'About Us', 'Services', 'Portfolio', 'Contact Us', 
-    'Careers', 'Testimonials', 'Blog', 'Youtube Videos', 
-    'Buy App Reviews', 'Site Map'
+    'Home', 'About', 'Services', 'Portfolio', 'Contact', 
+    'Careers', 'Testimonials', 'Site Map'
   ];
 
   return (

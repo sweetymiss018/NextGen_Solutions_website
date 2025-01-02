@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-900 to-purple-900 min-h-screen flex items-center">
+    <div id='home' className="bg-gradient-to-r from-blue-900 to-purple-900 min-h-screen flex items-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

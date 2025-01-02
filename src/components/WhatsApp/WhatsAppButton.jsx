@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const WhatsAppButton = () => {
-  const whatsappNumber = '+919891846187';
+  const whatsappNumber = '+917978929961';
   const message = 'Hello! I would like to discuss a project.';
 
   return (
@@ -16,7 +16,7 @@ const WhatsAppButton = () => {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
     >
-      <div className="bg-green-500 text-white p-4 rounded-full shadow-lg">
+      <div className="bg-green-500 text-white p-4 rounded-full shadow-lg animate-bounce">
         <FaWhatsapp className="text-3xl" />
       </div>
     </motion.a>
