@@ -14,7 +14,7 @@ const ContactInfo = () => {
       </div>
       <div className="flex items-center space-x-3 text-gray-400">
         <FaEnvelope />
-        <p>support@websolutioncentre.com</p>
+        <p>nextgensolnofficial@gmail.com</p>
       </div>
     </div>
   );
