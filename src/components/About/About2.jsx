@@ -1,74 +1,78 @@
-
-// const About2 = () => {
-//     return (
-//       <div className=" mx-auto px-4 py-12 md:py-20 bg-white">
-//         <div className="grid md:grid-cols-2 gap-8 items-center">
-//           {/* Left Column - Event Image */}
-//           <div className="relative rounded-lg overflow-hidden shadow-lg">
-//             <img 
-//               src="https://webeesocial.com/wp-content/uploads/2019/10/about-banner.jpg"
-//               alt="We live & breathe digital"
-//               className="w-full h-auto object-cover"
-//               loading="lazy"
-//             />
-//           </div>
-  
-//           {/* Right Column */}
-//           <div className="space-y-6">
-//             <div className="space-y-2">
-//               <h2 className="text-4xl md:text-5xl font-bold">
-//                 What <span className="text-emerald-500">We Do</span>?
-//               </h2>
-//               <div className="w-20 h-1 bg-yellow-400"></div>
-//             </div>
-            
-//             <p className="text-gray-700 leading-relaxed">
-//               We are working with clients from India, U.K., Canada, New Zealand, Hong Kong, Singapore, 
-//               U.A.E. e.t.c. across verticals like ecommerce, technology, retail and events. From marketing 
-//               events like Auto Expo - Components and MTV unplugged to creating some incredible ROAS 
-//               (Return on ad spends) for ecommerce brands, our team loves to be creative and strategic about 
-//               different lines of businesses. We won the 'Best Digital Innovation' award at the ACT summit in 
-//               Pune where our digital activation campaign for ACMA Safer work-places won accolades from 
-//               auto component OEMs. We are hungry for creativity and passionate about driving results. Our 
-//               clients below can attest to our efforts!
-//             </p>
-//           </div>
-//         </div>
-//       </div>
-//     );
-//   };
-
-// export default About2;
-
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const About2 = () => {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        when: "beforeChildren"
+      }
+    }
+  };
+
+  const imageAnimation = {
+    hidden: { opacity: 0, x: -50 },
+    show: { opacity: 1, x: 0, transition: { duration: 0.8 } }
+  };
+
+  const contentAnimation = {
+    hidden: { opacity: 0, x: 50 },
+    show: { opacity: 1, x: 0, transition: { duration: 0.8 } }
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 }
+  };
+
   return (
     <div className="min-h-screen bg-[#F5F5F5]">
       <div className="container mx-auto px-4 py-12 md:py-20">
         <div className="grid md:grid-cols-2 gap-8 items-center">
-
-            {/* Left Column - Banner Image */}
-          <div className="relative rounded-lg overflow-hidden shadow-lg">
+          {/* Left Column - Banner Image */}
+          <motion.div 
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={imageAnimation}
+            className="relative rounded-lg overflow-hidden shadow-lg"
+          >
             <img 
               src="https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fHdvcmxkfGVufDB8fDB8fHww"
-              // src="https://webeesocial.com/wp-content/uploads/2019/10/about-banner.jpg"
               alt="We live & breathe digital"
               className="w-full h-auto object-cover"
               loading="lazy"
             />
-          </div>
+          </motion.div>
 
           {/* Right Column */}
-          <div className="space-y-6">
-            <div className="space-y-2">
+          <motion.div 
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={contentAnimation}
+            className="space-y-6"
+          >
+            <motion.div variants={item} className="space-y-2">
               <h2 className="text-4xl md:text-5xl font-bold">
                 What <span className="text-emerald-500">We Do</span>?
               </h2>
-              <div className="w-20 h-1 bg-yellow-400"></div>
-            </div>
+              <motion.div 
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="w-20 h-1 bg-yellow-400 origin-left"
+              ></motion.div>
+            </motion.div>
             
-            <p className="text-gray-700 leading-relaxed">
+            <motion.p 
+              variants={item}
+              className="text-gray-700 leading-relaxed"
+            >
               We are working with clients from India, U.K., Canada, New Zealand, Hong Kong, Singapore, 
               U.A.E. e.t.c. across verticals like ecommerce, technology, retail and events. From marketing 
               events like Auto Expo - Components and MTV unplugged to creating some incredible ROAS 
@@ -77,10 +81,8 @@ const About2 = () => {
               Pune where our digital activation campaign for ACMA Safer work-places won accolades from 
               auto component OEMs. We are hungry for creativity and passionate about driving results. Our 
               clients below can attest to our efforts!
-            </p>
-          </div>
-
-          
+            </motion.p>
+          </motion.div>
         </div>
       </div>
     </div>

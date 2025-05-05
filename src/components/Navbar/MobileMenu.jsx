@@ -54,7 +54,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
       className="fixed inset-0 bg-black/95 z-50 lg:hidden flex flex-col items-center justify-center"
     >
       <CloseButton onClose={onClose} />
-      <NavLinks mobile />
+      <NavLinks mobile onLinkClick={onClose} />
     </motion.div>
   );
 };

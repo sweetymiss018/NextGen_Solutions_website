@@ -1,43 +1,3 @@
-// import { motion } from 'framer-motion';
-
-// const links = [
-//   { name: 'Home', href: '/hero' },
-//   { name: 'Services', href: '#services' },
-//   { name: 'Portfolio', href: '#portfolio' },
-//   { name: 'About', href: '/about' },
-//   { name: 'Contact', href: '#contact' }
-// ];
-
-// const linkVariants = {
-//   closed: { opacity: 0, x: -20 },
-//   open: { opacity: 1, x: 0 }
-// };
-
-// const NavLinks = ({ mobile }) => {
-//   return (
-//     <div className={`${mobile ? 'flex flex-col items-center space-y-6' : 'hidden lg:flex items-center space-x-8'}`}>
-//       {links.map((link) => (
-//         <motion.a
-//           key={link.name}
-//           href={link.href}
-//           variants={mobile ? linkVariants : {}}
-//           className={`${
-//             mobile 
-//               ? 'text-3xl text-white hover:text-purple-400' 
-//               : 'text-white/90 hover:text-white text-lg'
-//           } font-medium transition-colors`}
-//           whileHover={{ scale: 1.05 }}
-//           whileTap={{ scale: 0.95 }}
-//         >
-//           {link.name}
-//         </motion.a>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default NavLinks;
-
 import { motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
 
@@ -49,30 +9,44 @@ const links = [
   { name: 'Contact', to: '/contact' }
 ];
 
-const linkVariants = {
-  closed: { opacity: 0, x: -20 },
-  open: { opacity: 1, x: 0 }
-};
+const NavLinks = ({ mobile = false, onLinkClick }) => {
+  const linkVariants = {
+    closed: { opacity: 0, y: -10 },
+    open: { opacity: 1, y: 0 }
+  };
 
-const NavLinks = ({ mobile }) => {
   return (
-    <div className={`${mobile ? 'flex flex-col items-center space-y-6' : 'hidden lg:flex items-center space-x-8'}`}>
+    <div className={`${mobile ? 'flex flex-col items-center space-y-8' : 'hidden lg:flex space-x-4'}`}>
       {links.map((link) => (
-        <motion.div key={link.name} variants={mobile ? linkVariants : {}}>
+        <motion.div
+          key={link.name}
+          variants={mobile ? linkVariants : null}
+        >
           <NavLink
             to={link.to}
-            className={({ isActive }) => `
-              ${mobile 
-                ? 'text-3xl text-black hover:text-black' 
-                : 'text-black hover:text-black text-lg'
-              } font-medium transition-colors
-              ${isActive ? 'text-black' : ''}
-            `}
+            className={({ isActive }) => 
+              `${mobile 
+                ? 'text-white text-2xl hover:text-emerald-400' 
+                : 'text-black hover:text-emerald-600'} 
+              ${isActive ? (mobile ? 'text-emerald-400' : 'text-emerald-600 font-semibold') : ''}
+              px-3 py-2 font-medium transition-colors duration-200`
+            }
+            onClick={mobile ? onLinkClick : null}
           >
             {link.name}
           </NavLink>
         </motion.div>
       ))}
+      {mobile && (
+        <motion.div variants={linkVariants}>
+          <button
+            onClick={onLinkClick}
+            className="bg-emerald-600 text-white px-8 py-3 rounded-md text-xl font-medium mt-4"
+          >
+            REQUEST A QUOTE
+          </button>
+        </motion.div>
+      )}
     </div>
   );
 };

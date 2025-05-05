@@ -11,7 +11,7 @@ const Footer = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-3 rounded-md text-lg font-medium"
+            className="bg-gradient-to-r from-green-600 to-green-400 px-8 py-3 rounded-md text-lg font-medium"
           >
             Work with Us →
           </motion.button>
