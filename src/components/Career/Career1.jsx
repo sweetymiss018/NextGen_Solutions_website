@@ -70,22 +70,7 @@ const Career1 = () => {
 
    // ... (keeping the same Careers data)
    const Careers = [
-    {
-      title: "Digital Strategy and Planning",
-      description: "We combine expertise and innovation to develop strategic plans that drive business growth and enhance your brand's digital presence.",
-      buttonText: "Apply Now",
-      fullDescription: `As a Digital Strategist, you will:
-      • Lead the development and execution of digital strategies
-      • Analyze market trends and competitor activities
-      • Create detailed roadmaps for digital initiatives
-      • Work closely with clients to understand their business objectives`,
-      
-      Requirements:`
-      • 3+ years of experience in digital strategy
-      • Strong analytical and problem-solving skills
-      • Excellent communication and presentation abilities
-      • Bachelor's degree in Marketing, Business, or related field`
-    },
+   
     {
       title: "Creative Strategy and Web Graphics Design",
       description: "We specialize in crafting engaging digital experiences through innovative design solutions for websites, apps, and various digital platforms.",
@@ -95,12 +80,11 @@ const Career1 = () => {
       • Develop brand identity systems and style guides
       • Collaborate with development teams to ensure design feasibility
       • Create responsive designs for multiple devices`,
-      
-      Requirements:`
+      Requirements: `
       • Portfolio demonstrating strong web design skills
       • Proficiency in Adobe Creative Suite and Figma
       • Understanding of UI/UX principles
-      • 2+ years of professional design experience`
+      • Fresher to 3 years of professional design experience`
     },
     {
       title: "Social Media Marketing",
@@ -111,29 +95,90 @@ const Career1 = () => {
       • Create engaging content for multiple platforms
       • Monitor and analyze social media performance
       • Manage community engagement and respond to inquiries`,
-      
-      Requirements:`
-      • 2+ years of social media management experience
+      Requirements: `
+      • Fresher to 3 years of social media management experience
       • Strong content creation and copywriting skills
       • Experience with social media analytics tools
       • Understanding of current social media trends`
     },
+  
     {
-      title: "Videos, GIFs and Content Marketing",
-      description: "We produce compelling visual content optimized for digital platforms, helping you connect with your audience through engaging multimedia experiences.",
+      title: "Full Stack Developer",
+      description: "Join our development team to build robust, scalable web applications from frontend to backend.",
       buttonText: "Apply Now",
-      fullDescription: `As a Content Creator, you will:
-      • Produce high-quality video content and GIFs
-      • Develop content strategies across multiple channels
-      • Edit and optimize content for different platforms
-      • Collaborate with the marketing team on campaigns`,
-      Requirements:`
-      • Experience with video editing software
-      • Strong understanding of digital content formats
-      • Creative storytelling abilities
-      • Portfolio of previous video/animation work`     
+      fullDescription: `As a Full Stack Developer, you will:
+      • Design, develop, and maintain web applications
+      • Work on both frontend and backend systems
+      • Integrate APIs and third-party services
+      • Collaborate with UI/UX designers and other developers`,
+      Requirements: `
+      • Proficient in JavaScript, React.js, Node.js, MongoDB
+      • Experience with REST APIs and version control (Git)
+      • Understanding of cloud services (e.g., AWS)
+      • Fresher to 3 years of full-stack development experience`
+    },
+    {
+      title: "Digital Marketing Specialist",
+      description: "Drive online growth through targeted digital campaigns and strategic marketing efforts.",
+      buttonText: "Apply Now",
+      fullDescription: `As a Digital Marketing Specialist, you will:
+      • Plan and execute digital campaigns across channels
+      • Analyze KPIs and optimize campaigns for performance
+      • Coordinate with content and design teams
+      • Manage marketing automation tools and CRM integration`,
+      Requirements: `
+      • Fresher to 3 years of experience in digital marketing
+      • Strong knowledge of SEO, SEM, and analytics
+      • Familiarity with tools like Google Ads, Facebook Ads Manager
+      • Excellent written and communication skills`
+    },
+    {
+      title: "SEO Manager",
+      description: "Enhance website visibility and organic traffic through strategic SEO initiatives and performance tracking.",
+      buttonText: "Apply Now",
+      fullDescription: `As an SEO Manager, you will:
+      • Develop and implement SEO strategies
+      • Conduct keyword research and content optimization
+      • Monitor performance and generate SEO reports
+      • Collaborate with content creators and developers`,
+      Requirements: `
+      • Fresher to 3 years of experience in SEO
+      • Expertise in SEO tools like SEMrush, Ahrefs, or Moz
+      • Strong understanding of Google algorithms
+      • Excellent analytical and problem-solving skills`
+    },
+    {
+      title: "Graphic Designer",
+      description: "Bring ideas to life visually through branding, digital assets, and compelling design concepts.",
+      buttonText: "Apply Now",
+      fullDescription: `As a Graphic Designer, you will:
+      • Design graphics for web, print, and social media
+      • Maintain brand consistency across all visuals
+      • Collaborate with marketing and product teams
+      • Stay updated with design trends and tools`,
+      Requirements: `
+      • Proficient in Adobe Illustrator, Photoshop, and InDesign
+      • Creative portfolio showcasing original design work
+      • Strong eye for layout, typography, and color
+      • Fresher to 3 years of design experience`
+    },
+    {
+      title: "Frontend Developer",
+      description: "Craft pixel-perfect, responsive user interfaces and deliver seamless user experiences.",
+      buttonText: "Apply Now",
+      fullDescription: `As a Frontend Developer, you will:
+      • Convert UI designs into functional web components
+      • Ensure cross-browser compatibility and responsiveness
+      • Optimize code for performance and scalability
+      • Collaborate with backend developers and designers`,
+      Requirements: `
+      • Strong skills in HTML, CSS, JavaScript, React.js
+      • Familiarity with state management (Redux, Context API)
+      • Understanding of REST APIs and integration
+      • Fresher to 3 years of frontend development experience`
     }
   ];
+  
 
   const handleApply = (career) => {
     setSelectedJob(career);

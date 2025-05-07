@@ -44,7 +44,7 @@ const ServicesPage = () => {
       icon: "📱"
     },
     {
-      title: "Videos, GIFs and Content Marketing",
+      title: "Content Marketing",
       description: "We produce compelling visual content optimized for digital platforms, helping you connect with your audience through engaging multimedia experiences.",
       details: [
         "Concept development and storyboarding",
@@ -54,8 +54,45 @@ const ServicesPage = () => {
         "Content calendar and distribution strategy"
       ],
       icon: "🎥"
+    },
+    {
+      title: "Stunning Website Development",
+      description: "We build pixel-perfect, lightning-fast websites that are visually stunning, responsive, and fully optimized for performance and SEO.",
+      details: [
+        "Modern, clean UI with responsive layout",
+        "SEO and performance optimization",
+        "CMS and custom admin integration",
+        "Cross-browser & mobile compatibility",
+        "End-to-end deployment and support"
+      ],
+      icon: "💻"
+    },
+    {
+      title: "Frontend & Fullstack Development",
+      description: "Our developers bring your ideas to life using modern frontend frameworks and scalable backend architectures.",
+      details: [
+        "React.js, Vue.js, and Next.js expertise",
+        "Node.js, Express, MongoDB, PostgreSQL",
+        "REST API and GraphQL development",
+        "Authentication & secure session handling",
+        "Dockerized deployment and CI/CD setup"
+      ],
+      icon: "🧠"
+    },
+    {
+      title: "Animated & Interactive Websites",
+      description: "We specialize in building animated, interactive websites using Framer Motion and GSAP for high-engagement user experiences.",
+      details: [
+        "Smooth page transitions and parallax effects",
+        "Interactive elements for user engagement",
+        "Framer Motion, GSAP, and Lottie animations",
+        "Custom scroll effects and loaders",
+        "Performance-first motion design"
+      ],
+      icon: "✨"
     }
   ];
+  
 
   // Animation variants
   const backdrop = {
