@@ -69,19 +69,20 @@ const About2 = () => {
               ></motion.div>
             </motion.div>
             
-            <motion.p 
-              variants={item}
-              className="text-gray-700 leading-relaxed"
-            >
-              We are working with clients from India, U.K., Canada, New Zealand, Hong Kong, Singapore, 
-              U.A.E. e.t.c. across verticals like ecommerce, technology, retail and events. From marketing 
-              events like Auto Expo - Components and MTV unplugged to creating some incredible ROAS 
-              (Return on ad spends) for ecommerce brands, our team loves to be creative and strategic about 
-              different lines of businesses. We won the 'Best Digital Innovation' award at the ACT summit in 
-              Pune where our digital activation campaign for ACMA Safer work-places won accolades from 
-              auto component OEMs. We are hungry for creativity and passionate about driving results. Our 
-              clients below can attest to our efforts!
-            </motion.p>
+           <motion.p 
+  variants={item}
+  className="text-gray-700 leading-relaxed"
+>
+  We collaborate with clients across India, the U.K., Canada, New Zealand, Hong Kong, Singapore, 
+  and the U.A.E., delivering impactful solutions across industries like eCommerce, tech, retail, and media. 
+  Our expertise spans end-to-end services — from building fast, responsive websites using HTML/CSS/JS, 
+  WordPress, and the MERN stack, to crafting stunning designs in Figma and Canva. 
+  Whether it's custom frontend development, robust backend APIs, or digital marketing strategies that drive 
+  engagement and conversions, we focus on solving real business problems with creativity and precision. 
+  Our SEO-optimized solutions ensure visibility, while our digital campaigns deliver measurable results. 
+  We’re passionate about quality, obsessed with innovation, and committed to growth — for our clients and ourselves.
+</motion.p>
+
           </motion.div>
         </div>
       </div>

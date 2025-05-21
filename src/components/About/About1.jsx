@@ -48,20 +48,20 @@ const About1 = () => {
               We live and breathe digital. The Internet is our home.
             </motion.p>
             
-            <motion.p 
-              variants={item}
-              className="text-gray-700 leading-relaxed"
-            >
-              We are a buzzing digital media agency based out of New Delhi, India. 
-              Our team consists of experienced and hardworking social bees who 
-              breathe and live digital. Change on Facebook, Twitter, YouTube, 
-              Instagram, Google algorithm? Rest assured that we are aware of it 
-              the moment it's out. We combine our years of experience in creating 
-              integrated social solutions with creative output to generate a rich 
-              digital experience for our clients. We think we research, we create, 
-              and for our clients, we thrive to deliver best solutions to their 
-              every problem.
-            </motion.p>
+           <motion.p 
+  variants={item}
+  className="text-gray-700 leading-relaxed"
+>
+  We are a full-service digital solutions agency based in New Delhi, India, 
+  delivering top-notch web development, design, and marketing services to clients worldwide. 
+  Our team of creative developers, designers, and marketers specialize in building 
+  responsive websites using HTML, CSS, JavaScript, WordPress, and the MERN stack. 
+  From sleek frontend interfaces to powerful backend systems, we handle it all. 
+  Whether it's a custom Canva or Figma design, dynamic React apps, or robust Node.js backends, 
+  we craft tailored solutions that perform. We also offer expert digital marketing and SEO strategies 
+  to grow your brand online. We plan, we build, we market — so your business can thrive in the digital world.
+</motion.p>
+
           </motion.div>
 
           {/* Right Column - Banner Image */}

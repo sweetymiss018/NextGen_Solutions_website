@@ -21,6 +21,21 @@ const Contact1 = () => {
 
   const [errors, setErrors] = useState({});
 
+  // Add this at the top inside your component
+  const [captchaValue, setCaptchaValue] = useState(generateCaptcha());
+
+  function generateCaptcha() {
+    const characters =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let result = "";
+    for (let i = 0; i < 6; i++) {
+      result += characters.charAt(
+        Math.floor(Math.random() * characters.length)
+      );
+    }
+    return result;
+  }
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -42,6 +57,12 @@ const Contact1 = () => {
       newErrors.requirements = "Requirements are required";
     if (!formData.budget) newErrors.budget = "Budget is required";
     if (!formData.captcha) newErrors.captcha = "Please complete the captcha";
+    if (!formData.captcha) {
+      newErrors.captcha = "Please complete the captcha";
+    } else if (formData.captcha !== captchaValue) {
+      newErrors.captcha = "Captcha does not match";
+    }
+
     return newErrors;
   };
 
@@ -58,29 +79,29 @@ const Contact1 = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-     <motion.div 
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-[#111827] text-white py-20 px-4 md:px-8 border-b border-emerald-500"
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="bg-[#111827] text-white py-20 px-4 md:px-8 border-b border-emerald-500"
+      >
+        <div className="max-w-7xl mx-auto">
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className="text-4xl md:text-6xl mt-6 font-bold tracking-tight"
           >
-            <div className="max-w-7xl mx-auto">
-              <motion.h1 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3, duration: 0.8 }}
-                className="text-4xl md:text-6xl mt-6 font-bold tracking-tight"
-              >
-               Contact <span className="text-emerald-400">Us </span>
-              </motion.h1>
-              <motion.div 
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ delay: 0.6, duration: 0.5 }}
-                className="w-32 h-1 bg-emerald-500 mt-6 origin-left"
-              ></motion.div>
-            </div>
-          </motion.div>
+            Contact <span className="text-emerald-400">Us </span>
+          </motion.h1>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ delay: 0.6, duration: 0.5 }}
+            className="w-32 h-1 bg-emerald-500 mt-6 origin-left"
+          ></motion.div>
+        </div>
+      </motion.div>
 
       {/* Form Section */}
       <motion.div
@@ -250,12 +271,12 @@ const Contact1 = () => {
               </label>
               <div className="mt-1 py-2 flex items-center gap-4">
                 <div className="bg-gray-100 p-4 rounded-lg">
-                  <span className="font-mono text-lg">WEB2eb</span>
+                  <span className="font-mono text-lg">{captchaValue}</span>
                 </div>
                 <button
                   type="button"
                   className="text-emerald-500 hover:text-emerald-600 transition-colors"
-                  onClick={() => console.log("Reload captcha")}
+                  onClick={() => setCaptchaValue(generateCaptcha())}
                 >
                   <RefreshCw className="w-5 h-5" />
                 </button>
@@ -266,7 +287,7 @@ const Contact1 = () => {
                 id="captcha"
                 value={formData.captcha}
                 onChange={handleChange}
-                className="mt-2 block w-full rounded-lg border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500"
+                className="mt-2 block w-[12vw] h-[3vw] rounded-lg border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500"
               />
               {errors.captcha && (
                 <p className="text-sm text-red-600">{errors.captcha}</p>
@@ -297,8 +318,7 @@ const Contact1 = () => {
                   For business enquiries:
                 </h3>
                 <div className="mt-3 space-y-2">
-                  <p className="text-gray-600">soumya.sharma@webeesocial.com</p>
-                  <p className="text-gray-600">shubhendu.jha@webeesocial.com</p>
+                  <p className="text-gray-600">nextgensolnofficial@gmail.com</p>
                 </div>
               </div>
               <div>

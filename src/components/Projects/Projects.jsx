@@ -1,46 +1,58 @@
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
-import { SiPhp } from "react-icons/si";
-import { FaMagento } from "react-icons/fa";
-import { FaWordpress } from "react-icons/fa";
-import { FaAngular } from "react-icons/fa";
-import { FaDrupal } from "react-icons/fa6";
-import { SiZendesk } from "react-icons/si";
+import { FaHtml5, FaWordpress, FaFigma, FaReact, FaNodeJs, FaBullhorn } from 'react-icons/fa';
+import { SiCanva, SiMongodb, SiJavascript, SiGooglemarketingplatform } from 'react-icons/si';
+import { BsSearch } from 'react-icons/bs';
 
-
-
-const projects = [
+export const projects = [
   {
-    icon: <SiPhp/>,
-    title: 'PHP Development',
-    description: 'As a PHP development company, we have built several PHP sites that precisely cater to the needs of small and large ecommerce firms.'
+    icon: <FaHtml5 color="orange" />,
+    title: 'HTML/CSS/JS Development',
+    description: 'We create clean, fast, and responsive websites using plain HTML, CSS, and JavaScript — perfect for lightweight, custom builds.'
   },
   {
-    icon: <FaMagento color='greenYellow'/>,
-    title: 'Magento Development',
-    description: 'We possess specific expertise in building Magneto sites, with a stellar track record of front end and back end customization & functionality.'
+    icon: <FaReact color="#61DBFB" />,
+    title: 'Frontend Development (React)',
+    description: 'Modern, responsive, and scalable frontend development using React, Tailwind CSS, and modern design principles.'
   },
   {
-    icon: <FaWordpress color='blue'/>,
+    icon: <FaNodeJs color="green" />,
+    title: 'Backend Development (Node.js)',
+    description: 'We develop robust backend systems with Node.js, Express, REST APIs, and MongoDB for full control over your application.'
+  },
+  {
+    icon: <SiMongodb color="#4DB33D" />,
+    title: 'MERN Stack Development',
+    description: 'Complete web solutions using MongoDB, Express.js, React, and Node.js. From MVPs to full-scale applications.'
+  },
+  {
+    icon: <FaWordpress color="blue" />,
     title: 'WordPress Development',
-    description: 'Our technical team is well versed with several WordPress ecommerce plugins, and has built WordPress sites that are highly functional and secure.'
+    description: 'Professional WordPress development with custom themes, plugin integration, and secure, scalable site solutions.'
   },
   {
-    icon: <FaAngular color='red'/>,
-    title: 'Angular js',
-    description: 'Angular js based websites not only load faster, but also provide high security, reliability, and seamless performance.'
+    icon: <SiCanva color="#00C4CC" />,
+    title: 'Canva Design',
+    description: 'We design stunning social media graphics, posters, and marketing content using Canva for impactful visual branding.'
   },
   {
-    icon: <FaDrupal color='green'/>,
-    title: 'Drupal Development',
-    description: 'Our team is fully adept at creating Drupal sites which are easy to use, SEO friendly, highly secure, and load fast.'
+    icon: <FaFigma color="#A259FF" />,
+    title: 'UI/UX Design (Figma)',
+    description: 'We design user-centric, intuitive interfaces and wireframes in Figma — turning ideas into high-fidelity mockups.'
+  },
+  
+  {
+    icon: <FaBullhorn color="#FF5722" />,
+    title: 'Digital Marketing',
+    description: 'Grow your online presence with our digital marketing services including strategy, content creation, and analytics.'
   },
   {
-    icon: <SiZendesk color='red'/>,
-    title: 'Zen Cart Development',
-    description: 'The advanced ecommerce Zen Cart solution ensures that your site perfectly syncs with your ecommerce needs & objectives.'
+    icon: <BsSearch color="#009688" />,
+    title: 'SEO Optimization',
+    description: 'Boost your website’s visibility with technical SEO, on-page optimization, and keyword-targeted content strategies.'
   }
 ];
+
 
 const Projects = () => {
   return (
